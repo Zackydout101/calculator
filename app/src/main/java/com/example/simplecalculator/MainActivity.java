@@ -74,7 +74,10 @@ public class MainActivity extends AppCompatActivity {
                 resultText.setText(resultText.getText() + ".");
                 hasDot = true;
             }
-        } else {
+
+        } else if (pressID == R.id.reset) {
+            resultText.setText("");
+        }else {
             resultText.setText("ERROR");
         }
 
@@ -131,6 +134,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 requiresCleaning = true;
             }
+        }
+        else if(pressID == R.id.reset){
+            resultText.setText("");
+
         }
 
     }
